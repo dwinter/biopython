@@ -150,6 +150,7 @@ import NexusIO
 import PhylipIO
 import EmbossIO
 import FastaIO
+import ArlequinIO
 
 #Convention for format names is "mainname-subtype" in lower case.
 #Please use the same names as BioPerl and EMBOSS where possible.
@@ -163,6 +164,7 @@ _FormatToIterator = {#"fasta" is done via Bio.SeqIO
                      "phylip-sequential" : PhylipIO.SequentialPhylipIterator,
                      "phylip-relaxed" : PhylipIO.RelaxedPhylipIterator,
                      "stockholm" : StockholmIO.StockholmIterator,
+                     "arlequin" : AlrequinIO.ArlequinIterator,
                      }
 
 _FormatToWriter = {#"fasta" is done via Bio.SeqIO
@@ -394,7 +396,6 @@ def read(handle, format, seq_count=None, alphabet=None):
     multiple alignments this function would raise an exception.
 
     >>> from Bio import AlignIO
-    >>> filename = "Emboss/needle.txt"
     >>> format = "emboss"
     >>> alignment = AlignIO.read(filename, format)
     Traceback (most recent call last):
