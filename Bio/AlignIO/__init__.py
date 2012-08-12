@@ -164,7 +164,7 @@ _FormatToIterator = {#"fasta" is done via Bio.SeqIO
                      "phylip-sequential" : PhylipIO.SequentialPhylipIterator,
                      "phylip-relaxed" : PhylipIO.RelaxedPhylipIterator,
                      "stockholm" : StockholmIO.StockholmIterator,
-                     "arlequin" : AlrequinIO.ArlequinIterator,
+                     "arlequin" : ArlequinIO.ArlequinIterator,
                      }
 
 _FormatToWriter = {#"fasta" is done via Bio.SeqIO
